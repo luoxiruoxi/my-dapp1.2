@@ -49,8 +49,7 @@ class GetDemandInfo extends Component {
                 var abi = require("../contracts/Demand.json")//////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!
                 console.log(abi);
                 //定义合约地址
-                var address = "0xA58d81D1Fe28dC161d256F6D6212fbC9825A93A2"
-                // var address = "0xDD12fCd81a628b7BaB8e34C36Fbc72Cf927Ae43D"
+                var address = "0x65455f847835dfaD6E14fDe011EF6B5907d73af7"
                 //实例化合约,全局变量
                 window.myContract = new web3.eth.Contract(abi.abi, address);
                 console.log(window.myContract)

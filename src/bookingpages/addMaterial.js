@@ -37,7 +37,7 @@ class Addmaterial extends Component {
                 var abi = require("../contracts/book.json")//////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!
                 console.log(abi);
                 //定义合约地址
-                var address = "0xBEA320d104F19Ba504EFacaaa1c951Bb7726bbdb"
+                var address = "0x6Da44da53624c28109b4Dcb8Fe5E297aEEE625bf"
                 // var address = "0xDD12fCd81a628b7BaB8e34C36Fbc72Cf927Ae43D"
                 //实例化合约,全局变量
                 window.myContract = new web3.eth.Contract(abi.abi, address);
