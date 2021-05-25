@@ -8,7 +8,8 @@ class Setdates extends Component {
         super(props);
         this.state = { 
             _contractday:'0',
-            _txoutday:'0'
+            _txoutday:'0',
+            _bookcontractId: 0
          };
     }
 
@@ -34,11 +35,10 @@ class Setdates extends Component {
                 const web3 = new Web3(provider)
                 console.log(web3);
                 //导入abi文件
-                var abi = require("../contracts/book.json")//////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!
+                var abi = require("../contracts/book.json")
                 console.log(abi);
                 //定义合约地址
-                var address = "0x6Da44da53624c28109b4Dcb8Fe5E297aEEE625bf"
-                // var address = "0xDD12fCd81a628b7BaB8e34C36Fbc72Cf927Ae43D"
+                var address = "0xd13827c27c102CFb12A226E3EA03C04c4042b2a7"
                 //实例化合约,全局变量
                 window.myContract = new web3.eth.Contract(abi.abi, address);
                 console.log(window.myContract)
@@ -88,7 +88,7 @@ class Setdates extends Component {
     }
 
     onClickset=()=>{
-        window.myContract.methods.setdates(this.state._contractday, this.state._txoutday).send({
+        window.myContract.methods.setdates(this.state._contractday, this.state._txoutday,this.state._bookcontractId).send({
             from: window.defaultaccount
         })
     }
@@ -97,6 +97,14 @@ class Setdates extends Component {
         return <div>
             <div>
             <Space direction="vertical" size={12}>
+                <label>订单号</label>
+                <br/><br/>
+                <Input onChange={(e)=>{
+                this.setState({
+                    _bookcontractId:e.target.value
+                })
+                console.log('订单号： ',this.state._bookcontractId);
+            }} />
                 <label>订单生成日</label>
                 <DatePicker showTime onChange={this.onChangeOne} onOk={this.onOkOne} />
                 <label>运输日</label>

@@ -1,4 +1,5 @@
-{  "abi": [
+{    
+  "abi": [
   {
     "inputs": [],
     "payable": false,
@@ -94,52 +95,6 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_bookcontractId",
-        "type": "uint256"
-      }
-    ],
-    "name": "getBookInfo",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [
-      {
-        "internalType": "uint256",
         "name": "_piecenumber",
         "type": "uint256"
       }
@@ -152,9 +107,9 @@
         "type": "uint256"
       },
       {
-        "internalType": "enum book.bookCondition",
+        "internalType": "uint256",
         "name": "",
-        "type": "uint8"
+        "type": "uint256"
       },
       {
         "internalType": "uint256",
@@ -220,9 +175,9 @@
     "name": "getbookCondition",
     "outputs": [
       {
-        "internalType": "enum book.bookCondition",
+        "internalType": "uint256",
         "name": "",
-        "type": "uint8"
+        "type": "uint256"
       }
     ],
     "payable": false,
@@ -241,6 +196,11 @@
         "internalType": "uint256",
         "name": "_txoutday",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_bookcontractId",
+        "type": "uint256"
       }
     ],
     "name": "setdates",
@@ -251,9 +211,61 @@
   },
   {
     "constant": true,
-    "inputs": [],
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_bookcontractId",
+        "type": "uint256"
+      }
+    ],
     "name": "contractdates",
     "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_bookcontractId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getBookInfo",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
       {
         "internalType": "uint256",
         "name": "",

@@ -49,11 +49,10 @@ class GetBookInfo extends Component {
                 const web3 = new Web3(provider)
                 console.log(web3);
                 //导入abi文件
-                var abi = require("../contracts/book.json")//////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!
+                var abi = require("../contracts/book.json")
                 console.log(abi);
                 //定义合约地址
-                var address = "0x6Da44da53624c28109b4Dcb8Fe5E297aEEE625bf"
-                // var address = "0xDD12fCd81a628b7BaB8e34C36Fbc72Cf927Ae43D"
+                var address = "0xd13827c27c102CFb12A226E3EA03C04c4042b2a7"
                 //实例化合约,全局变量
                 window.myContract = new web3.eth.Contract(abi.abi, address);
                 console.log(window.myContract)

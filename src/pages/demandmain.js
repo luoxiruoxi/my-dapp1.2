@@ -67,7 +67,7 @@ class Demandmain extends Component {
                 var abi = require("../contracts/Demand.json")//////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!
                 console.log(abi);
                 //定义合约地址
-                var address = "0x65455f847835dfaD6E14fDe011EF6B5907d73af7"
+                var address = "0xA54cB527B044620c432f70D69D9Ec0DB6639168E"
                 //实例化合约,全局变量
                 window.myContract = new web3.eth.Contract(abi.abi, address);
                 console.log(window.myContract)
